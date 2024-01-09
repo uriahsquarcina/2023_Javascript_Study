@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p id="output">Your answer will go here!</p>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+const output= document.getElementById("output");
+let display = "";
+
+//for loops in javascript
+/*
+for(let k=0; k<100; k++){
+    display += "*";
+    if(k % 10 === 0){
+        display += "*" + "<br  />";
+    } else{
+        display += "*";
+    }
+} */
+/*
+for(let z = 0; z < 10; z++){
+    for(let g = 0; g <10; g++){
+        display += "*";
+    }
+    display+= "<br  />";
+}*/
+
+for(let z = 0; z < 6; z++) {
+    for(let b = 0; b < z; b++ ){
+        display += "*";
+    }
+    display += "<br  />";
+}
+
+
+output.innerHTML = display;
+
+
+
+</script>
+
+</body>
+</html>
