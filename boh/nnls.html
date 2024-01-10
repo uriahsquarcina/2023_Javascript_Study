@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Review</title>
+</head>
+<body>
+<label for="name">Name</label>
+<input type="text" name="name" id="name" />
+<label for="experience">Experience</label>
+<input type="text" name="experience" id="experience" />
+<br />
+<button id="submit">Submit</button>
+<br />
+<img src="img/stock.png" id="img" alt="Stock Image"/>
+
+<script>
+    // Gain access to the HTML elements
+    const submit = document.getElementById("submit");
+    const name = document.getElementById("name");
+    const experience = document.getElementById("experience");
+    const image = document.querySelector("img");
+
+    // Add the event listener to the submit button
+    submit.addEventListener("click", my_function);
+    function my_function(){
+        // Check name field
+        if(name.value === ''){
+            name.style.backgroundColor = "red";
+        }else{
+            name.style.backgroundColor = 'white';
+        }
+
+        // Check Experience Field
+        if(experience.value === ''){
+            experience.style.backgroundColor = "red";
+        }else{
+            experience.style.backgroundColor = 'white';
+        }
+
+        if(name.value !== '' && experience.value !== ''){
+            image.style.display = "none";
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
